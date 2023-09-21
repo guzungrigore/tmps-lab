@@ -26,12 +26,15 @@ public class CreditCard extends Card{
     }
 
     @Override
-    public void withdraw(double amount) {
+    public int withdraw(double amount) {
         if (this.balance >= amount) {
             System.out.println("Withdrawing " + amount + " using Credit Card.");
             balance -= amount;
+            return 1;
         } else {
             System.out.println("Insufficient balance and credit limit.");
+            return -1;
         }
     }
+
 }

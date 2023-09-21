@@ -5,6 +5,7 @@ public class DebitCard extends Card{
 
     public DebitCard() {
         super();
+        this.balance = 0;
     }
 
     @Override
@@ -18,12 +19,14 @@ public class DebitCard extends Card{
     }
 
     @Override
-    public void withdraw(double amount) {
+    public int withdraw(double amount) {
         if (this.balance >= amount) {
             System.out.println("Withdrawing " + amount + " using Debit Card.");
-            deposit(-amount);
+            this.balance -= amount;
+            return 1;
         } else {
             System.out.println("Insufficient balance.");
+            return -1;
         }
     }
 }

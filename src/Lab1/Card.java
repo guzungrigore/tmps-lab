@@ -4,8 +4,6 @@ import java.util.Random;
 
 public abstract class Card implements BalanceProvider{
     private final StringBuffer cardNumber = new StringBuffer();
-
-
     public Card() {
         Random random = new Random();
         for(int i = 1; i <= 16; i++){
@@ -16,9 +14,7 @@ public abstract class Card implements BalanceProvider{
         }
         System.out.println("Your new card number is: " + getCardNumber());
     }
-
     public StringBuffer getCardNumber() {
         return cardNumber;
     }
-
 }

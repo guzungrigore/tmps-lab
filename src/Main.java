@@ -1,6 +1,4 @@
-import Lab1.Card;
-import Lab1.CreditCard;
-import Lab1.DebitCard;
+import Lab1.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,12 +16,12 @@ public class Main {
 
         Card creditCard = new CreditCard(5000, 1.5);
 
-        System.out.println(creditCard);
-
         creditCard.deposit(500);
         System.out.println(creditCard.getBalance());
 
-        creditCard.withdraw(1000);
+        Transaction transaction = new CardTransaction();
+        transaction.transaction(creditCard, debitCard, 1000);
+
         System.out.println(creditCard.getBalance());
     }
 }
