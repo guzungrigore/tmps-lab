@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
         Card debitCard = new DebitCard();
-        Card creditCard = new CreditCard(1000);
 
         debitCard.deposit(2000);
         System.out.println(debitCard.getBalance());
@@ -15,6 +14,11 @@ public class Main {
         System.out.println(debitCard.getBalance());
 
         debitCard.withdraw(1000);
+
+
+        Card creditCard = new CreditCard(5000, 1.5);
+
+        System.out.println(creditCard);
 
         creditCard.deposit(500);
         System.out.println(creditCard.getBalance());

@@ -1,16 +1,18 @@
 package Lab1;
 
 public class CreditCard extends Card{
-    private final int creditLimit;
+    private final int initialSum;
+    private double leftToPay;
+    private final double rate;
     private double balance;
 
-    public CreditCard(int creditLimit) {
+    public CreditCard(int initialSum, double rate) {
         super();
-        this.creditLimit = creditLimit;
-
-
+        this.initialSum = initialSum;
+        this.rate = rate;
+        this.leftToPay = initialSum * rate;
+        this.balance = initialSum;
     }
-
 
     @Override
     public double getBalance() {
@@ -19,14 +21,15 @@ public class CreditCard extends Card{
 
     @Override
     public void deposit(double amount) {
-        balance += amount;
+        leftToPay -= amount;
+        System.out.println("You have left to pay: " + this.leftToPay);
     }
 
     @Override
     public void withdraw(double amount) {
-        if (getBalance() + creditLimit >= amount) {
+        if (this.balance >= amount) {
             System.out.println("Withdrawing " + amount + " using Credit Card.");
-            deposit(-amount);
+            balance -= amount;
         } else {
             System.out.println("Insufficient balance and credit limit.");
         }
