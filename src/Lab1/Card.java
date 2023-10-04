@@ -2,8 +2,8 @@ package Lab1;
 
 import java.util.Random;
 
-public abstract class Card implements BalanceProvider{
-    private final StringBuffer cardNumber = new StringBuffer();
+public abstract class Card implements BalanceProvider, Cloneable{
+    public StringBuffer cardNumber = new StringBuffer();
     public Card() {
         Random random = new Random();
         for(int i = 1; i <= 16; i++){
@@ -16,5 +16,10 @@ public abstract class Card implements BalanceProvider{
     }
     public StringBuffer getCardNumber() {
         return cardNumber;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
