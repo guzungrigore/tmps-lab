@@ -1,22 +1,22 @@
-# Topic: *Creational Design Patterns*
+# Topic: *Creation Design Patterns*
 
 ---
 
 ## Objectives:
-&ensp; &ensp; __1. Study and understand the Creational Design Patterns.__
+&ensp; &ensp; __1. Study and understand the Creation Design Patterns.__
 
 &ensp; &ensp; __2. Choose a domain, define its main classes/models/entities and choose the appropriate instantiation mechanisms.__
 
-&ensp; &ensp; __3. Use some creational design patterns for object instantiation in a sample project.__
+&ensp; &ensp; __3. Use some creation design patterns for object instantiation in a sample project.__
 
 ## Some Theory:
-&ensp; &ensp; Creational design patterns are a category of design patterns that focus on the process of object creation.
+&ensp; &ensp; Creation design patterns are a category of design patterns that focus on the process of object creation.
 They provide a way to create objects in a flexible and controlled manner, while decoupling the client code from the
-specifics of object creation. Creational design patterns address common problems encountered in object creation, such as
+specifics of object creation. Creation design patterns address common problems encountered in object creation, such as
 how to create objects with different initialization parameters, how to create objects based on certain conditions, or how
-to ensure that only a single instance of an object is created. There are several creational design patterns that have their 
+to ensure that only a single instance of an object is created. There are several creation design patterns that have their 
 own strengths and weaknesses. Each of it is best suited for solving specific problems related to object creation. By using
-creational design patterns, developers can improve the flexibility, maintainability, and scalability of their code.
+creation design patterns, developers can improve the flexibility, maintainability, and scalability of their code.
 
 #### Some examples of this kind of design patterns are:
 

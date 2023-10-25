@@ -1,6 +1,6 @@
 package Lab1;
 
-interface BalanceProvider {
+public interface BalanceProvider {
     double getBalance();
     void deposit(double amount);
     int withdraw(double amount);
